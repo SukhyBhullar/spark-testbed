@@ -1,0 +1,1 @@
+/usr/spark/spark-1.4.0/bin/spark-shell

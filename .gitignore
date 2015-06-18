@@ -1,1 +1,9 @@
 .vagrant/
+scripts/metastore_db/
+scripts/CodingChallengeScala/target/
+scripts/CodingChallengeODBC/target/
+scripts/CodingChallengeScala/project/
+scripts/CodingChallengeODBC/project/
+workingdir/
+scripts/.idea/
+files/

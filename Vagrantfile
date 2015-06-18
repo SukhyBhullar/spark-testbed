@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
-    vb.gui = true
+    #vb.gui = true
   
     # Customize the amount of memory on the VM:
     vb.memory = "4096"
@@ -25,14 +25,20 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision "shell", inline: <<-SHELL
 	
+	echo "deb http://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
 	sudo apt-get update
 	sudo apt-get -y install openjdk-7-jdk
 	sudo apt-get install git -y
+	sudo apt-get install sbt -y
 	sudo mkdir /usr/spark
 	sudo wget http://www.mirrorservice.org/sites/ftp.apache.org/spark/spark-1.4.0/spark-1.4.0.tgz -O /usr/spark/spark-1.4.0.tgz	
 	sudo tar xf /usr/spark/spark-1.4.0.tgz -C /usr/spark
 	cd /usr/spark/spark-1.4.0/
 	sudo sbt/sbt -Phive -Phive-thriftserver assembly
+	
+	
+	cd /vagrant/scripts/codingchallengeODBC
+	sudo sbt package
 	
   SHELL
 end
