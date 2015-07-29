@@ -16,9 +16,9 @@ object DemoTrades {
   def main(args: Array[String]): Unit =
   {
 
-    val conf = new SparkConf().setAppName("Demo EMIR Trades")
+    val conf = new SparkConf().setAppName("Demo EMIR Trade Repo")
     val sc = new SparkContext(conf)
-    val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+    val sqlContext = new org.apache.spark.sql.hive.HiveContext(sc)
     import sqlContext.implicits._
 
     val filepath = "/vagrant/files/54930023MRU76783OL52_20140321_175823_RAIL-KRX_0001.csv"
@@ -33,5 +33,8 @@ object DemoTrades {
 
     results.map(t => "Count: " + t(0)).collect().foreach(println)
 
+    validRowsDataFrame.saveAsTable("ValidRows")
+
+    HiveThriftServer2.startWithContext(sqlContext)
   }
 }
