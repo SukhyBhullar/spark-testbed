@@ -1,1 +1,1 @@
-/usr/spark/spark-1.3.0/bin/spark-shell -i /vagrant/scripts/scratchpad.scala
+/usr/spark/spark-1.3.1/bin/spark-shell -i /vagrant/scripts/scratchpad.scala

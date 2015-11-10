@@ -6,10 +6,10 @@ sudo apt-get install git -y
 #java -version
 
 sudo mkdir /usr/spark
-sudo wget http://www.mirrorservice.org/sites/ftp.apache.org/spark/spark-1.3.0/spark-1.3.0.tgz -O /usr/spark/spark-1.3.0.tgz
+sudo wget http://www.mirrorservice.org/sites/ftp.apache.org/spark/spark-1.3.1/spark-1.3.1.tgz -O /usr/spark/spark-1.3.1.tgz
 
 
-cd /usr/spark/spark-1.3.0/
+cd /usr/spark/spark-1.3.1/
 sudo sbt/sbt assembly
 	
 	

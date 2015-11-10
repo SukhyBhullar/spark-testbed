@@ -28,9 +28,9 @@ This will reload the box. The default login is
 - username : vagrant
 - password : vagrant
 
-Spark is located in /usr/spark/spark-1.3.0/ and the shell can be run using:
+Spark is located in /usr/spark/spark-1.4.1/ and the shell can be run using:
 
-`/usr/spark/spark-1.3.0/bin/spark-shell`
+`/usr/spark/spark-1.4.1/bin/spark-shell`
 
 I have also put a couple of examples in there, you can run the first two questions of the coding challenge by running
 

@@ -50,7 +50,7 @@ object CodingChallengeODBC {
     //val practiceDataFrame = sqlContext.read.format("com.databricks.spark.csv").option("header", "true").load("/usr/data/practice.csv")
 
     // Register the DataFrames as a table.
-    practiceDataFrame.saveAsTable("practices")
+    practiceDataFrame.mode(SaveMode.Overwrite).saveAsTable("practices")
 
     // SQL statements can be run by using the sql methods provided by sqlContext.
 //    val results = sqlContext.sql("SELECT Name FROM practices")
