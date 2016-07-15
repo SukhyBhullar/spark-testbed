@@ -31,9 +31,9 @@ Vagrant.configure(2) do |config|
 	sudo apt-get install git --force-yes -y
 	sudo apt-get install sbt --force-yes -y
 	sudo mkdir /usr/spark
-	sudo wget http://www.mirrorservice.org/sites/ftp.apache.org/spark/spark-1.3.1/spark-1.3.1.tgz -O /usr/spark/spark-1.3.1.tgz	
-	sudo tar xf /usr/spark/spark-1.3.1.tgz -C /usr/spark
-	cd /usr/spark/spark-1.3.1/
+	sudo wget http://www.mirrorservice.org/sites/ftp.apache.org/spark/spark-1.5.1/spark-1.5.1.tgz -O /usr/spark/spark-1.5.1.tgz	
+	sudo tar xf /usr/spark/spark-1.5.1.tgz -C /usr/spark
+	cd /usr/spark/spark-1.5.1/
 	sudo sbt/sbt -Phive -Phive-thriftserver assembly
 	
 	

@@ -1,1 +1,1 @@
-/usr/spark/spark-1.3.1/bin/spark-shells
+/usr/spark/spark-1.5.1/bin/spark-shells

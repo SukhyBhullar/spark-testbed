@@ -33,7 +33,7 @@ object DemoTrades {
 
     results.map(t => "Count: " + t(0)).collect().foreach(println)
 
-    validRowsDataFrame.saveAsTable("ValidRows")
+    validRowsDataFrame.write.mode("overwrite").saveAsTable("ValidRows")
 
     HiveThriftServer2.startWithContext(sqlContext)
   }
